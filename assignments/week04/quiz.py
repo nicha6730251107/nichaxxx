@@ -17,14 +17,41 @@ Update age (by creating a new tuple)
 # Complete this program
 def personal_info_manager():
     # Create initial person tuple
-    person = ("", 0, "", "")  # name, age, city, country
+    person = ("jimmy", 20, "chonburi", "thai")  # name, age, city, country
     hobbies = []
     
     # Your code here
-    pass
+    while True:
+        print("\n1. Display into")
+        print("2. add hobby")
+        print("3. Remove hobby")
+        print("4. Edit age")
+        print("5. exit")
+        choice = input("What do you want to do?: ")
 
-if __name__ == "__main__":
-    personal_info_manager()
+        if choice == "1":
+            print("Name:", person[0])
+            print("Age:", person[1])
+            print("City:", person[2])
+            print("Country:", person[3])
+            print("Hoppies:", person[0])
+        
+        elif choice == "2":
+            hobby = input("Insert new hoppy: ")
+            hobbies.append(hoppy)
+
+        elif choice == "3":
+            del hobbies[0] 
+
+
+        age = int(input("Insert new age: "))
+        person_list = list(person)
+        person_list[1] = age
+        person = tuple(person_list)
+
+
+    if __name__ == "__main__":
+        personal_info_manager()
 
 
 """
