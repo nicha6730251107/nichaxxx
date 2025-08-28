@@ -1,52 +1,3 @@
-""" เขียน function ชื่อ welcome_message ที่มีคุณสมบัติดังนี้:
-
-รับ parameter 2 ตัว คือ name และ course
-return ข้อความต้อนรับในรูปแบบ string
-รูปแบบ: "Welcome [name] to [course] class!"
-
-"""
-def welcome_message(name, course):
-    # Your Problem 1 solution
-    pass 
-
-""" เขียน function ชื่อ calculate_circle ที่มีคุณสมบัติดังนี้:
-
-รับ parameter 1 ตัว คือ radius
-return dictionary ที่มี area และ circumference
-ใช้ค่า π = 3.14159
-ปัดเศษทั้งสองค่าให้เหลือ 2 ตำแหน่งหลังจุดทศนิยม """
-
-def calculate_circle(radius):
-    # Your Problem 2 solution
-    pass
-
-""" เขียน function ชื่อ create_user_profile ที่มีคุณสมบัติดังนี้:
-
-รับ parameters: username (จำเป็น), age (ค่าเริ่มต้น 18), premium (ค่าเริ่มต้น False)
-return string ที่จัดรูปแบบข้อมูลผู้ใช้
-รูปแบบ: "[username] (age: [age]) - [Premium User / Standard User]"
-
-"""
-
-def create_user_profile(username, age=18, premium=False):
-    # Your Problem 3 solution
-    pass
-
-""" เขียน function ชื่อ analyze_scores ที่มีคุณสมบัติดังนี้:
-
-รับ list ของคะแนน (ตัวเลข)
-return dictionary ที่มี:
-
-total: ผลรวมของคะแนนทั้งหมด
-average: คะแนนเฉลี่ย (ปัดเศษ 1 ตำแหน่งหลังจุดทศนิยม)
-highest: คะแนนสูงสุด
-lowest: คะแนนต่ำสุด
-passed: จำนวนคะแนนที่ >= 70 """
-
-def analyze_scores(scores):
-    # Your Problem 4 solution
-    pass
-
 """ เขียน function ชื่อ count_vowels_consonants ที่มีคุณสมบัติดังนี้:
 
 รับ parameter text เป็น string
@@ -55,8 +6,17 @@ return dictionary ที่มี vowels และ consonants counts
 ไม่สนใจตัวใหญ่ตัวเล็ก (case insensitive) """
 
 def count_vowels_consonants(text):
-    # Your Problem 5 solution
-    pass
+    text = text.repace("","")
+    text = text.lower()
+    vowels = text.count('a') + text.count('e') + text.count('i') + text.count('o') + text.count('u')
+    numbers =text.count('1') + text.count('2') + text.count('3') + text.count('4') + text.count('5') + text.count('6') + text.count('7') + text.count('8') + text.count('9')
+    consonants = len(text) + vowels - numbers
+
+    return {
+        "vowels": vowels,
+        "consonants": consonants
+    }
+
 
 # =============================================================================
 # TEST SECTION - DO NOT MODIFY
